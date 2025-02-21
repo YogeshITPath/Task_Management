@@ -32,7 +32,7 @@ task_management_system\settings.py
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres', # Replace your DB name here
+        'NAME': 'task_management_system', # Replace your DB name here
         'USER': 'postgres', # Replace your DB user here
         'PASSWORD': 'ips12345', # Replace your DB password here
         'HOST': 'localhost',
@@ -41,13 +41,19 @@ DATABASES = {
 }
 ```
 
-### STEP 04- Create table inside database
+### STEP 04- Create database
+
+```bash
+python manage.py makemigrations
+```
+
+### STEP 05- Create table inside database
 
 ```bash
 python manage.py migrate
 ```
 
-### STEP 05- Run server
+### STEP 06- Run server
 
 ```bash
 python manage.py runserver
