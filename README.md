@@ -28,13 +28,13 @@ pip install -r requirements.txt
 
 ```bash
 
-inventory_management\settings\development.py
+task_management_system\settings.py
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '', # Replace your DB name here
-        'USER': '', # Replace your DB user here
-        'PASSWORD': '', # Replace your DB password here
+        'NAME': 'postgres', # Replace your DB name here
+        'USER': 'postgres', # Replace your DB user here
+        'PASSWORD': 'ips12345', # Replace your DB password here
         'HOST': 'localhost',
         'PORT': '5432', # Replace your DB port here
     }
