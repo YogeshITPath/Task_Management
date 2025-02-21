@@ -24,7 +24,7 @@ source venv\bin\activate #linux
 pip install -r requirements.txt
 ```
 
-### STEP 03- Change database creadential
+### STEP 03- Change database credential
 
 ```bash
 
@@ -41,19 +41,13 @@ DATABASES = {
 }
 ```
 
-### STEP 04- Create database
-
-```bash
-python manage.py makemigrations
-```
-
-### STEP 05- Create table inside database
+### STEP 04- Create table inside database
 
 ```bash
 python manage.py migrate
 ```
 
-### STEP 06- Run server
+### STEP 05- Run server
 
 ```bash
 python manage.py runserver
