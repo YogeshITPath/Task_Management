@@ -31,8 +31,6 @@ class CustomLoginView(LoginView):
         user = form.get_user()
         login(self.request, user)
         # Create session data
-        self.request.session['username'] = user.username
-        self.request.session['user_id'] = user.id
         messages.success(self.request, f'Welcome, {user.username}!')
         return super().form_valid(form)
 
