@@ -87,7 +87,7 @@ def delete_task(request, id):
 @login_required
 def toggle_task(request, id):
     task = get_object_or_404(Task, id=id, user=request.user)
-    task.status = not task.status
+    task.status = not task.status #flipping condition True then Masked as completed & False means Mark as Pending.
     task.save()
     messages.success(request, 'Task status updated!')
     return redirect('task_list')
