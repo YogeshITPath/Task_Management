@@ -19,8 +19,8 @@ from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
-    path("", include("tasks.urls")),  # Include task app URLs
-    path('api/', include("api.urls")),  # Include API app URLs
+    path("tasks/", include("tasks.urls")),  # Include task app URLs
+    path('', include("api.urls")),  # Include API app URLs
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  # JWT Obtain Token
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # JWT Refresh Token
     path('admin/', admin.site.urls),  # Admin panel

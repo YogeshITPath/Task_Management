@@ -28,17 +28,18 @@ class CustomLoginView(LoginView):
     template_name = 'tasks/login.html'
     authentication_form = AuthenticationForm
 
-    def dispatch(self, request, *args, **kwargs):
+"""    def dispatch(self, request, *args, **kwargs):
         # Check if the user is already authenticated
         if request.user.is_authenticated:
             return redirect('/tasks/')
-        return super().dispatch(request, *args, **kwargs)
+        return super().dispatch(request, *args, **kwargs)"""
 
-    def form_valid(self, form):
-        user = form.get_user()
-        login(self.request, user)
-        messages.success(self.request, f'Welcome, {user.username}!')
-        return super().form_valid(form)
+def form_valid(self, form):
+    user = form.get_user()
+    login(self.request, user)
+    messages.success(self.request, f'Welcome, {user.username}!')
+    return super().form_valid(form)
+
 
 # Prevent caching for logged-in pages
 @cache_control(no_cache=True, must_revalidate=True, no_store=True)
