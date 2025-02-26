@@ -9,7 +9,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 
-# imports Task
+# imports from Task App
 from tasks.models import Task
 from .serializers import TaskSerializer
 
